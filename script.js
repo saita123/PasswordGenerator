@@ -27,7 +27,6 @@ setIndicator("#ccc");
 function handleSlider() {
     inputSlider.value = passwordLength;
     lengthDisplay.innerText = passwordLength;
-    //or kuch bhi karna chahiye ? - HW
     const min = inputSlider.min;
     const max = inputSlider.max;
     inputSlider.style.backgroundSize = ( (passwordLength - min)*100/(max - min)) + "% 100%"
@@ -90,7 +89,6 @@ async function copyContent() {
     catch(e) {
         copyMsg.innerText = "Failed";
     }
-    //to make copy wala span visible
     copyMsg.classList.add("active");
 
     setTimeout( () => {
@@ -102,7 +100,7 @@ async function copyContent() {
 function shufflePassword(array) {
     //Fisher Yates Method
     for (let i = array.length - 1; i > 0; i--) {
-        //random J, find out using random function
+
         const j = Math.floor(Math.random() * (i + 1));
         //swap number at i index and j index
         const temp = array[i];
